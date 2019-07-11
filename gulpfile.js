@@ -85,7 +85,8 @@ styles = () => {
 		// .pipe(rename({ suffix: '.min', prefix : '' }))
 		//comment
 		.pipe(prefixer({
-			browsers: ['last 15 versions']
+			overrideBrowserslist: ['last 15 versions'],
+			cascade: false
 		}))
 		.pipe(cssmin())
 		.pipe(rename({

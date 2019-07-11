@@ -1,18 +1,18 @@
 {
   "name": "html_start",
   "version": "4.0.0",
-"description": "HTML_BOOTSTRAP_SASS_GULP_OPTIMIZED_IE9_&_UP",
+  "description": "HTML_BOOTSTRAP_SASS_GULP_OPTIMIZED_IE9_&_UP",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dzmitry Prokharau",
+  "author": "GoodMediaDeveloper",
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "browser-sync": "^2.26.7",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
