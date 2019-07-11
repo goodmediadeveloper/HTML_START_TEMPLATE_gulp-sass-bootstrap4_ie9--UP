@@ -1,0 +1,221 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/common"
+@import "../libs/components-font-awesome/scss/fontawesome"
+@import "../libs/components-font-awesome/scss/solid"
+@import "../libs/components-font-awesome/scss/brands"
+
+i
+	font-size: 10rem
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video	
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	vertical-align: baseline
+
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+html
+	font-size: 13px
+
+html, body
+	height: 100%
+
+
+
+
+body
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	counter-reset: section
+	//padding-top: 6.7vw
+	@include font-size(1rem)
+	@include line-height(1)
+	z-index: -100
+
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+
+h1
+	@include font-size(5.4rem)
+	@include line-height(1)
+//
+//
+h2
+	@include font-size(3.464rem)
+	@include line-height(1)
+//
+//
+h3
+	@include font-size(2.1rem)
+	@include line-height(1)
+//
+//
+h4
+	@include font-size(2.1rem)
+	@include line-height(1)
+//
+p
+	@include font-size(1.15rem)
+//
+a
+	@include font-size(0.8rem)
+	color: rgba(81, 81, 81, 255)
+	&:hover
+		color: rgba(81, 81, 81, 255)
+
+
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+*
+	position: relative
+
+ul
+	padding: 0
+	margin: 0
+
+
+
+li
+	list-style: none
+
+
+
+
+
+
+section
+	z-index: -200
+	overflow: hidden
+
+
+
+
+
+section
+	width: 100%
+	min-height: 100vh
+	background-size: cover
+	background-repeat: no-repeat
+	&:nth-child(odd)
+		background: hotpink
+	&:nth-child(even)
+		background: mediumseagreen
+	&:first-child
+		background: #00b3ee !important
+
+.section-img
+	background-repeat: no-repeat !important
+	background-size: cover !important
+	background-position: center !important
+img
+	width: 80%
+	margin: 0 auto
+	display: block
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+
+
+
+// Custome styles //
+section
+	height: 100vh
+.header
+	width: 100%
+	height: 100vh
+	//color: #fff
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		//background-image: url("../images/bg_images/ex-1.jpg")
+		//background-size: cover
+		//position: fixed
+	&__capt
+		font-size: 7.1vw
+		line-height: 0.8
+	&__sub-capt
+		font-size: 0.78vw
+	&__located
+		font-size: 0.84vw
+		&-link
+			font-size: 0.93vw
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
+

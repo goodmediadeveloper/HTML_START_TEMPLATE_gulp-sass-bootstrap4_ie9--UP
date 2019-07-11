@@ -1,0 +1,60 @@
+@mixin font-size($size)
+  @if (type_of($size)==number)
+    font-size: calc(#{$size} + 2 * (100vw - 320px) / (960 - 320))
+
+@mixin line-height($size)
+  @if (type_of($size)==number)
+    line-height: calc(120% + #{$size} * (100vw - 960px) / (320 - 960))
+
+
+@mixin absolute-all
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+@mixin absolute-arg-position($top, $bottom, $left, $right)
+  position: absolute
+  top: $top
+  bottom: $bottom
+  left: $left
+  right: $right
+
+@mixin vertical-align-width($height)
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  right: 0
+  height: $height
+
+@mixin vertical-align
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+@mixin horizontal-align
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+
+@mixin bg-block
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+@mixin before-mask($color)
+  content: ''
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: $color
+
+@mixin circle($diameter)
+  width: $diameter
+  height: $diameter
+  border-radius: 50%
+  display: block

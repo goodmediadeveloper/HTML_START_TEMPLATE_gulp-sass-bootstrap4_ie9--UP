@@ -1,0 +1,156 @@
+
+
+.owl-events-1 .owl-figure-item
+  display: flex
+  width: 100%
+  margin-top: 1.55vw
+  padding: 0 0.9vw
+  &__wrap-img
+    width: 55.5%
+  &__figcaption
+    width: 34.9%
+    margin-top: 0.2vw
+    padding-left: 1.5vw
+    line-height: 1
+  &__capt
+    padding-right: 1vw
+    font-size: 1.55vw
+    font-weight: 400
+    margin-bottom: 3vw
+  &__text
+    font-size: 1.05vw
+    font-weight: 100
+    line-height: 1
+    &:last-child
+      font-size: 1.25vw
+      margin-top: 3.2vw
+  &__span
+    font-size: 1.2vw
+
+
+
+.owl-nav
+  width: 109%
+  top: 50%
+  left: 50%
+  margin-left: -54.5%
+  @include vertical-align
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__prev,&__next
+    background-image: url("../../../images/arrow-owl.svg")
+    width: 3vw
+    height: 3vw
+    background-repeat: no-repeat
+    background-size: contain
+  &__next
+    transform: rotate(180deg)
+
+
+.owl-events-2
+  position: static
+  .owl-figure-item
+    flex-direction: column
+    &__wrap-img
+      width: 100%
+      display: flex
+      align-content: center
+      justify-content: center
+      overflow: hidden
+      &::before
+        content: ''
+        display: block
+        padding-top: 100%
+    &__img
+      width: auto !important
+      height: 100% !important
+      position: absolute
+      @include horizontal-align
+    &__capt
+      font-weight: 400
+      margin-top: 1.5vw
+      margin-bottom: 1.4vw
+      line-height: 1
+    &__text
+      font-size: 1vw
+      font-weight: 100
+      line-height: 1.1
+      &:last-child
+        margin-top: 3.3vw
+
+  .owl-nav
+    width: 107%
+    margin-left: -53.5%
+
+.owl-events-3
+  position: static
+  .owl-figure-item
+    flex-direction: column
+    &__wrap-img
+      width: 100%
+      display: flex
+      align-content: center
+      justify-content: center
+      overflow: hidden
+      cursor: pointer
+      z-index: 100
+      &:hover
+        opacity: 0.7
+      &::before
+        content: ''
+        display: block
+        padding-top: 118.1%
+      &:after
+        content: 'Открыть карту \25BA'
+        position: absolute
+        left: 1.4vw
+        bottom: 0.6vw
+        font-family: $default-font
+        font-size: 1.2vw
+    &__img
+      width: auto !important
+      height: 100% !important
+      position: absolute
+    &__capt
+      font-weight: 400
+      display: inline-block
+    &__text
+      font-size: 1.54vw
+      font-weight: 100
+      margin-top: 0.6vw
+      line-height: 1
+
+  .owl-nav
+    width: 87.3%
+    margin-left: -43.65%
+    top: 41%
+    z-index: 50
+    height: 0
+
+summary
+  display: inline-block
+  position: relative
+  margin-top: 2.2vw
+summary::-webkit-details-marker
+  display: none
+
+summary::after
+  content: ''
+  background-image: url("../../../images/arrow-owl.svg")
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  position: absolute
+  top: 10%
+  right: -16.8%
+  width: 2vw
+  height: 1.5vw
+  transform: rotate(-90deg)
+  transition: all .2s ease-in
+
+
+details[open] > summary::after
+  transform: rotate(90deg)
+
+
