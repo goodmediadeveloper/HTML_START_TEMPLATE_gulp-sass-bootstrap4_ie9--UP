@@ -30,6 +30,15 @@
 	  top: 50%
 	  transform: translateY(-50%)
 
+@mixin before-icon($width,$height)
+  @if (type_of($width)==number and type_of($height)==number)
+    width: $width
+		height: $height
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		position: absolute
+
 
 
 // --- //
